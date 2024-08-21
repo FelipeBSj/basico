@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParxChaDos.Views.InSesion"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="1,0">
+                    
+                    <GradientStop  Color="#48B8EF"
+                                   Offset="0.5" />
+                    <GradientStop  Color="#042AAB"
+                                   Offset="1" />
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Image Source="https://i.ibb.co/9TdkR0n/LogosinF.png"
+                   Margin="0,50,0,40"
+                   WidthRequest="350" />
+            <Label Text="Iniciar Sesión"
+                   HorizontalTextAlignment="Center"
+                   FontSize="35"
+                   TextColor="#024BAA"
+                   Margin="0,0,0,20" />
+            <Frame Margin="40,10"
+                   CornerRadius="20"
+                   Padding="0,0,0,0"
+                   HasShadow="False">
+                <Entry TextColor="Black"
+                       Margin="20,0"
+                       Placeholder="E-mail"
+                       PlaceholderColor="#92CAF4"
+                       HorizontalTextAlignment="Center"
+                       Keyboard="Email" />
+            </Frame>
+            <Frame Margin="40,0"
+                   CornerRadius="20"
+                   Padding="0,0,0,0"
+                   HasShadow="False">
+                <Entry TextColor="#92CAF4"
+                       Margin="20,0"
+                       Placeholder="Contraseña"
+                       PlaceholderColor="#92CAF4"
+                       HorizontalTextAlignment="Center"
+                       IsPassword="True" />
+            </Frame>
+            <Button Text="Iniciar Sesion"
+                    HorizontalOptions="Center"
+                    TextTransform="None"
+                    CornerRadius="30"
+                    BackgroundColor="#024BAA"
+                    Margin="0,10,0,0"
+                    x:Name="btnIniciar"
+                    Command="{Binding ProcesoIniciarS}" />
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Label Text="¿Eres nuevo? Registrate "
+                       Margin="0,15"
+                       TextColor="White"></Label>
+                <Button Text="Aquí"
+                        TextColor="#48B8EF"
+                        FontSize="11"
+                        Margin="-34,0,0,-2"
+                        BackgroundColor="Transparent"
+                        x:Name="btnRegist"
+                        Command="{Binding ProcesoNuevoU}" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
